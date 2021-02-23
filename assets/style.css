@@ -1,7 +1,4 @@
 *{
-
-  margin: 0px;
-  box-sizing: border-box;
   --color-primario: #fff;
   --color-secundario: #fc758c;
   --color-complementario: #ff5672;
@@ -10,7 +7,12 @@
   --tamano-fuente-pequeño: 14px;
   --tamano-fuente-medio: 17px;
   --tamano-fuente-grande: 40px;
-
+  --font-family-primaria: 'Montserrat', sans-serif;
+  --font-family-secundaria: 'Questrial', sans-serif;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: var(--font-family-primaria);
+ 
 
 }
 
@@ -44,7 +46,8 @@
 .layout .landing{
 
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
   flex-direction: column;
   grid-column: span 3;
   grid-row: span 1;
@@ -99,4 +102,24 @@
   font-size: var(--tamano-fuente-grande);
   color: var(--color-primario);
 
+}
+
+.landing__p{
+
+  font-size: var(--tamano-fuente-medio);
+  color: var(--color-primario);
+
+
+}
+
+.landing__a{
+
+  width: 180px;
+  height: 10px;
+  background-color:  var(--color-primario);
+  color: var(--color-secundario);
+  text-decoration: none;
+
+  font-size: var(--tamano-fuente-pequeño);
+  padding: 20px 20px;
 }
