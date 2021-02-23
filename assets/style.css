@@ -19,7 +19,7 @@
 .layout{
 
   display: grid;
-  grid-template: 200px 500px 1fr 200px / 1fr ;
+  grid-template: 130px 600px 1fr 200px / 1fr ;
   height: 100vh;
   
  
@@ -36,18 +36,14 @@
   grid-column: span 1;
   margin-left: 10%;
   margin-right: 10%;
-  
-
-
-
 
 }
 
 .layout .landing{
 
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
   flex-direction: column;
   grid-column: span 3;
   grid-row: span 1;
@@ -58,7 +54,7 @@
 
   display: flex;
   display: grid;
-  grid-template:  200px 200px 1fr 200px 200px / 1fr  ;
+  grid-template:  200px 200px 1fr 150px 200px / 1fr  ;
   grid-row: span 1;
   grid-column: span 3;
   
@@ -67,12 +63,34 @@
 
 
 }
+
+.header__div{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 250px;
+}
 .header__figure{
 
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+  
 
 }
+
+.header__namelogo h1{
+
+  font-size:20px;
+  display: inline-block;
+  padding-top: 5px;
+
+}
+.header__namelogo p{
+
+  font-size: 13px;
+
+}
+
 
 .header__menu ul{
 
@@ -88,11 +106,15 @@
 
   text-decoration: none;
   margin-left: 20px;
+  display: block;
+
 }
 
 .landing{
 
   background-color: var(--color-secundario);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 .landing__h1{
@@ -106,20 +128,26 @@
 
   font-size: var(--tamano-fuente-medio);
   color: var(--color-primario);
+  text-align: center;
 
 
 }
 
 .landing__a{
 
-  width: 180px;
-  height: 10px;
+  width: 200px;
+  
   background-color:  var(--color-primario);
   color: var(--color-secundario);
   text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  padding: 15px 20px;
+}
 
-  font-size: var(--tamano-fuente-pequeño);
-  padding: 20px 20px;
+.landing__h1,.landing__p,.landing__a{
+
+  margin-bottom: 25px;
 }
 
 .section{
@@ -127,12 +155,14 @@
   background-color: var(--color-primario);
   
   height: 100vh;
+ 
 }
 
-.section .section__logosraros{
+.section .section__navigation{
 
   display: flex;
   justify-content: center;
+  align-items: center;
   grid-row: span 1;
   grid-column: 0/1;
 
@@ -140,13 +170,6 @@
 
  
 
-}
-.section__logosraros div{
- 
-  margin-left: 20px;
-  
- 
-  
 }
 
 .section .section__menu{
@@ -165,17 +188,36 @@
 
 .section .section__div{
 
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-row: span 1;
   grid-column:span 4;
+
 
 
 }
 
 .section .section__footer{
 
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
   grid-row: span 1;
   grid-column:span 5;
 }
+
+.section__navigation i{
+
+  color: var(--color-complementario);
+
+  margin-left: 20px;
+}
+
+
 
 .footer__p span{
 
@@ -186,12 +228,14 @@
 .footer_div i{
 
   color: var(--color-fuente-secundario);
+  font-size: var(--tamano-fuente-pequeño);
 }
 
 
 .section__div button {
   
   width: 150px;
+  height: 40px;
   border: none;
   padding: 10px 20px;
   color: var(--color-fuente-primario);
