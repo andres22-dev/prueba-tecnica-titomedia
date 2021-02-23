@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-between;
   grid-row: span 1;
-  grid-column: span 0;
+  grid-column: span 1;
   margin-left: 10%;
   margin-right: 10%;
   
@@ -52,20 +52,18 @@
   grid-column: span 3;
   grid-row: span 1;
   
-
-
-
- 
-
-  
 }
 
 .layout .section{
 
   display: flex;
-  
+  display: grid;
+  grid-template:  200px 200px 1fr 200px 200px / 1fr  ;
   grid-row: span 1;
   grid-column: span 3;
+  
+  text-align: center;
+  flex-direction: column;
 
 
 }
@@ -122,4 +120,81 @@
 
   font-size: var(--tamano-fuente-pequeño);
   padding: 20px 20px;
+}
+
+.section{
+  
+  background-color: var(--color-primario);
+  
+  height: 100vh;
+}
+
+.section .section__logosraros{
+
+  display: flex;
+  justify-content: center;
+  grid-row: span 1;
+  grid-column: 0/1;
+
+  
+
+ 
+
+}
+.section__logosraros div{
+ 
+  margin-left: 20px;
+  
+ 
+  
+}
+
+.section .section__menu{
+  grid-row: span 1;
+  grid-column: 1/2;
+
+}
+
+.section .section__portafolio{
+
+  grid-row: span 1;
+  grid-column:span 2/3;
+
+
+}
+
+.section .section__div{
+
+  grid-row: span 1;
+  grid-column:span 4;
+
+
+}
+
+.section .section__footer{
+
+  grid-row: span 1;
+  grid-column:span 5;
+}
+
+.footer__p span{
+
+  color: #ff5672;
+
+}
+
+.footer_div i{
+
+  color: var(--color-fuente-secundario);
+}
+
+
+.section__div button {
+  
+  width: 150px;
+  border: none;
+  padding: 10px 20px;
+  color: var(--color-fuente-primario);
+
+  background-color: var(--color-complementario);
 }
