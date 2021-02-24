@@ -32,6 +32,7 @@
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
   grid-row: span 1;
   grid-column: span 1;
   margin-left: 10%;
@@ -98,15 +99,49 @@
 }
 
 .header__menu ul li{
-
+  width: 100px;
   list-style: none;
+
 }
 
 .header__menu ul li a{
 
+  padding: 7px 13px;
   text-decoration: none;
   margin-left: 20px;
   display: block;
+  font-size: var(--tamano-fuente-pequeño);
+  color: var(--color-fuente-secundario);
+
+}
+
+.header__menu  li:hover{
+
+  background-color:var(--color-complementario);
+  transition: .4s;
+
+}
+
+.header__btnmenu{
+
+  margin-right: 30px;
+  font-size: 25px;
+  color:var(--color-complementario);
+  cursor: pointer;
+
+}
+
+
+.header__menu  li a:hover{
+
+  color: var(--color-primario);
+
+}
+
+.header__menu ul.show{
+
+    top: 125px;
+    right: 0px;
 
 }
 
@@ -241,4 +276,153 @@
   color: var(--color-fuente-primario);
 
   background-color: var(--color-complementario);
+}
+
+
+@media screen and (max-width:952){
+
+  .header__figure{
+
+    width: 20px;
+    height: 20px;
+    
+  
+  }
+  
+  .header__namelogo h1{
+  
+    font-size:10px;
+    padding-top: 2.5px;
+  
+  }
+  .header__namelogo p{
+  
+    font-size: 6px;
+  
+  }
+  
+  .header__menu ul li a{
+  
+    font-size: 12px;
+  
+  }
+  
+
+}
+
+@media screen and (max-width: 858px){
+
+  .layout{
+
+  
+    grid-template: 61px 600px 1fr 200px / 1fr ;
+    
+    
+   
+  
+   
+  
+  }
+  .header__div{
+    
+    width: 125px;
+    
+  }
+  .header__figure{
+
+    width: 30px;
+    height: 30px;
+    
+  
+  }
+  
+  .header__namelogo h1{
+  
+    font-size:10px;
+    padding-top: 2.5px;
+  
+  }
+  .header__namelogo p{
+  
+    font-size: 6px;
+  
+  }
+
+  .header__menu {
+
+    height: 65px;
+  }
+  .header__btnmenu{
+    display: inline-flex;
+
+  }
+
+  .header__menu ul{
+
+    position: fixed;
+    width: 100vw;
+    height: calc(100% - 65px);
+    background-color: var(--color-secundario);
+    top: -100vh;
+   
+    transition: all .4s;
+    
+    flex-direction: column;
+
+  }
+
+  .header__menu ul li{
+
+    margin: 30px 0 0 0;
+    line-height:  30px;
+    display: flex;
+    
+
+  }
+
+  .header__menu ul li:hover{
+
+   background: none;
+
+  }
+
+  .header__menu ul li a{
+
+    font-size: 20px;
+    color: var(--color-primario);
+    font-weight: bold;
+ 
+   }
+
+   .header__menu ul li a:hover{
+
+    background-color: var(--color-primario);
+   }
+
+
+
+}
+
+
+@media screen and (max-width: 858px) and (orientation:landscape){
+
+  .header__menu ul li{
+
+    margin: 5px 0 0 0;
+    
+
+  }
+
+  .header__menu ul{
+
+    overflow: scroll;
+    height: calc(100% - 65px);
+    
+
+  }
+
+
+
+
+
 }
