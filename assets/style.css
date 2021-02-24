@@ -570,7 +570,7 @@ list-style: none;
 
   .portafolio{
 
-    grid-template:  120px 70px 320px 120px 170px /  repeat(3, 250px);
+    grid-template:  120px 70px 280px 120px 170px /  repeat(3, 200px);
     grid-gap: 10px 10px;
     overflow: hidden;
   
