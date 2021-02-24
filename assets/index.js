@@ -1,7 +1,8 @@
 const url = `https://rickandmortyapi.com/api/character/`;
 
-
-
+const maximun = 1;
+const minimun = 20;
+const random = () => Math.floor(Math.random()*(maximun - minimun)+ minimun)
 
 const petitionCharacter = async (url) =>{
 
@@ -15,13 +16,16 @@ const petitionCharacter = async (url) =>{
 
 const addCharacter = async() =>{
 
-  const rick = await petitionCharacter(`${url}1`);
-  const img = document.querySelector('#img1')
-  const createImage = document.createElement('img');
-  createImage.src = rick.image
-  img.append(createImage);
-  
-  
+  const rick = await petitionCharacter(`${url}`);
+  //const img = document.querySelector('#img1')
+  const containers = document.querySelectorAll('.portafolio__item');
+  let array = [...containers];
+
+  array.forEach(container=>{
+    let createImage = document.createElement('img');
+    createImage.src = rick.results[random()].image;
+    container.append(createImage);
+  }) 
 
   
 }
