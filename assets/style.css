@@ -124,6 +124,30 @@
   transition: .4s;
 
 }
+.items__search{
+  list-style: none;
+  
+}
+
+.item__input{
+
+  display: none;
+}
+.items__search i{
+
+padding: 10px 30px;
+color: var(--color-complementario);
+list-style: none;
+
+}
+
+.items__search i:hover{
+
+  background-color: var(--color-complementario);
+  color: var(--color-primario);
+  cursor: pointer;
+  
+}
 
 .header__btnmenu{
 

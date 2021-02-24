@@ -2,7 +2,29 @@ const url = `https://rickandmortyapi.com/api/character/`;
 
 const maximun = 1;
 const minimun = 20;
-const random = () => Math.floor(Math.random()*(maximun - minimun)+ minimun)
+const random = () => Math.floor(Math.random()*(maximun - minimun)+ minimun);
+const search = document.querySelector('#search');
+const searchClass = document.querySelector('.items__search');
+const searchKeyword = document.querySelector('#searchKeyword');
+
+const searchSomething = () => {
+
+  if(searchKeyword.style.display === 'none'){
+
+    searchKeyword.style.display = 'block';
+    
+    
+
+  }else{
+
+
+    searchKeyword.style.display = 'none';
+    
+
+  }
+
+}
+searchClass.addEventListener('click',searchSomething);
 
 const petitionCharacter = async (url) =>{
 
